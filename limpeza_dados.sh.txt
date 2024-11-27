@@ -1,0 +1,33 @@
+# Avaliação de qualidade das leituras com FastQC
+fastqc SRRXXXXXXX.fastq
+
+# Limpeza e corte de sequências de baixa qualidade com Trim Galore
+trim_galore --fastqc -q 25 --trim-n --max_n 0 -j 1 --length 18 --dont_gzip SRRXXXXXXX.fastq
+
+#Passos para criar e editar um arquivo com nano:
+#Abrir o terminal: Pressione Ctrl + Alt + T para abrir o terminal no Ubuntu.
+
+#Criar ou editar um arquivo com nano: Para criar um novo arquivo ou editar um arquivo existente, você usa o seguinte comando:
+
+#bash
+#Copiar código
+#nano nome_do_arquivo.txt
+#O nano é o editor de texto que será aberto.
+#Se o arquivo nome_do_arquivo.txt não existir, ele será criado. Caso contrário, o arquivo será aberto para edição.
+#Escrever no arquivo: Após o nano abrir, você pode começar a digitar diretamente no arquivo.
+
+#Salvar o arquivo: Depois de editar o arquivo, você precisa salvar as mudanças. Para fazer isso:
+#3Pressione Ctrl + O (O de output, que significa "gravar no arquivo").
+#O nano pedirá para confirmar o nome do arquivo. Basta pressionar Enter para confirmar.
+#Sair do nano: Depois de salvar o arquivo, você pode sair do nano. Para isso:
+
+#Pressione Ctrl + X para sair do editor.
+#Se você não tiver salvo as mudanças, o nano perguntará se deseja salvar o arquivo antes de sair. Se isso acontecer, você pode pressionar Y para salvar, ou N para sair sem salvar.
+#Comandos úteis dentro do nano:
+#Ctrl + O: Salvar as alterações no arquivo.
+#Ctrl + X: Sair do editor. Se houver alterações não salvas, ele perguntará se deseja salvar.
+#Ctrl + W: Procurar por um texto dentro do arquivo.
+#Ctrl + K: Cortar uma linha de texto.
+#Ctrl + U: Colar a linha que foi cortada.
+#Ctrl + C: Exibir a posição do cursor no arquivo (linha e coluna).
+#Esses são os comandos mais básicos para trabalhar com o nano. O editor é bastante simples e fácil de usar, sendo uma boa escolha para edição rápida de arquivos no terminal.

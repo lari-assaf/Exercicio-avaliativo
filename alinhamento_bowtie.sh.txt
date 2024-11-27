@@ -1,0 +1,6 @@
+# Construção do índice de alinhamento com Bowtie
+bowtie-build reference.fasta reference_index
+
+# Alinhamento das sequências contra a referência de Wolbachia
+bowtie -f -S -a -v 0 -p 3 -t reference_index sample.fasta > sample.sam 2> sample_bowtie.log
+#O comando bowtie-build cria um índice de alinhamento a partir de um arquivo de referência (por exemplo, reference.fasta), gerando arquivos de índice como reference_index. O comando bowtie alinha as sequências de leitura (sample.fasta) contra esse índice, gerando uma saída no formato SAM. Os parâmetros -f e -S indicam o formato de entrada e saída, -a permite múltiplos alinhamentos, -v 0 restringe a zero o número de mismatches permitidos, -p 3 utiliza 3 threads para acelerar o processo e -t imprime estatísticas de tempo. A saída é salva em sample.sam e os logs em sample_bowtie.log.
